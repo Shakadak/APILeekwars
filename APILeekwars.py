@@ -115,6 +115,56 @@ class APIFunction():
         url = self.url + "/get-categories/"
         return self.session.get(url).json()
 
+class APIGarden():
+    """docstring for APIGarden"""
+    def __init__(self, session):
+        self.session = session
+        self.url = "https://leekwars.com/api/garden"
+
+    def get(self, token):
+        url = self.url + "/get-all/" + token
+        return self.session.get(url).json()
+
+    def get_composition_opponents(self, composition, token):
+        url = self.url + "/get-composition-opponents/" + str(composition) + "/" + token
+        return self.session.get(url).json()
+
+    def get_farmer_challenge(self, target, token):
+        url = self.url + "/get-farmer-challenge/" + str(target) + "/" + token
+        return self.session.get(url).json()
+
+    def get_farmer_opponents(self, token):
+        url = self.url + "/get-farmer-opponents/" + token
+        return self.session.get(url).json()
+
+    def get_leek_opponents(self, leek_id, token):
+        url = self.url + "/get-leek-opponents/" + str(leek_id) + "/" + token
+        return self.session.get(url).json()
+
+    def get_solo_challenge(self, leek_id, token):
+        url = self.url + "/get-solo-challenge/" + str(leek_id) + "/" + token
+        return self.session.get(url).json()
+
+    def start_farmer_challenge(self, target_id, token):
+        url = self.url + "/start-farmer-challenge/"
+        return self.session.post(url, data = {"target_id" : target_id, "token" : token}).json()
+
+    def start_farmer_fight(self, target_id, token):
+        url = self.url + "/start-farmer-fight/"
+        return self.session.post(url, data = {"target_id" : target_id, "token" : token}).json()
+
+    def start_solo_challenge(self, leek_id, target_id, token):
+        url = self.url + "/start-solo-challenge/"
+        return self.session.post(url, data = {"leek_id" : leek_id, "target_id" : target_id, "token" : token}).json()
+
+    def start_solo_fight(self, leek_id, target_id, token):
+        url = self.url + "/start-solo-fight/"
+        return self.session.post(url, data = {"leek_id" : leek_id, "target_id" : target_id, "token" : token}).json()
+
+    def start_team_fight(self, composition_id, target_id, token):
+        url = self.url + "/start-team-fight/"
+        return self.session.post(url, data = {"composition_id" : composition_id, "target_id" : target_id, "token" : token}).json()
+
 class APILeekwars():
     """docstring for APILeekwars"""
     def __init__(self):
@@ -122,6 +172,7 @@ class APILeekwars():
         self.farmer = APIFarmer(self.session)
         self.fight = APIFight(self.session)
         self.function = APIFunction(self.session)
+        self.garden = APIGarden(self.session)
 
 
 def init_session():
