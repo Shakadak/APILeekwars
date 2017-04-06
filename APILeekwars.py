@@ -101,12 +101,27 @@ class APIFight:
         url = self.url + "/get/" + str(fight_id) + "/" + token
         return self.session.get(url).json()
 
+class APIFunction():
+    """docstring for APIFunction"""
+    def __init__(self, session):
+        self.session = session
+        self.url = "https://leekwars.com/api/function"
+
+    def get_all(self):
+        url = self.url + "/get-all/"
+        return self.session.get(url).json()
+
+    def get_all(self):
+        url = self.url + "/get-categories/"
+        return self.session.get(url).json()
+
 class APILeekwars():
     """docstring for APILeekwars"""
     def __init__(self):
         self.session = requests.Session()
         self.farmer = APIFarmer(self.session)
         self.fight = APIFight(self.session)
+        self.function = APIFunction(self.session)
 
 
 def init_session():
