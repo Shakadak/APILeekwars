@@ -173,28 +173,3 @@ class APILeekwars():
         self.fight = APIFight(self.session)
         self.function = APIFunction(self.session)
         self.garden = APIGarden(self.session)
-
-
-def init_session():
-    fn = "leekwars.data"
-    base_data = {}
-    try:
-        with open(fn) as f:
-            base_data = json.load(f)
-    except Exception as e:
-        print(e)
-        pass
-    leekwars = APILeekwars()
-    farmer_name = "PumpkinAreBetter"
-    token = leekwars.farmer.login_token(farmer_name, base_data["farmers"][farmer_name])["token"]
-    print(token)
-    r = leekwars.farmer.get_from_token(token)
-    print(r)
-    r = leekwars.fight.get(21049389)
-    print(r)
-    r = leekwars.farmer.disconnect(token)
-    print(r)
-    #print(json.dumps(r, sort_keys=True, indent=4))
-
-if __name__ == '__main__':
-    init_session()
