@@ -89,5 +89,5 @@ ENV/
 .ropeproject
 
 # Other stuff
-leekwars.data
+leekwars.json
 test.py

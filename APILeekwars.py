@@ -1,8 +1,4 @@
-#!/usr/bin/env python3
-
-import os
 import requests
-import json
 
 class APIFarmer:
     """docstring for wat"""
@@ -98,7 +94,7 @@ class APIFight:
         return self.session.get(url).json()
 
     def get_logs(self, fight_id, token):
-        url = self.url + "/get/" + str(fight_id) + "/" + token
+        url = self.url + "/get-logs/" + str(fight_id) + "/" + token
         return self.session.get(url).json()
 
 class APIFunction():
