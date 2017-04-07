@@ -1,5 +1,31 @@
 import requests
 
+class APIAI:
+    """docstring for watson"""
+    def __init__(self, session):
+        self.session = session
+        self.url = "https://leekwars.com/api/ai"
+
+    def change_folder(self, ai_id, folder_id, token):
+        url = self.url + "/change-folder/"
+        return self.session.post(url, data = {"ai_id" : ai_id, "folder_id" : folder_id, "token" : token}).json()
+
+    def delete(self, ai_id, token):
+        url = self.url + "/delete/"
+        return self.session.post(url, data = {"ai_id" : ai_id, "token" : token}).json()
+
+    def get(self, ai_id, token):
+        url = self.url + "/get/" + ai_id + "/" + token
+        return self.session.get(url).json()
+
+    def get_farmer_ais(self, token):
+        url = self.url + "/get-farmer-ais/" + token
+        return self.session.get(url).json()
+
+    def new(self, folder_id, v2, token):
+        url = self.url + "/new/"
+        return self.session.post(url, data = {"folder_id" : folder_id, "v2": v2, "token" : token}).json()
+
 class APIFarmer:
     """docstring for wat"""
     def __init__(self, session):
@@ -107,7 +133,7 @@ class APIFunction():
         url = self.url + "/get-all/"
         return self.session.get(url).json()
 
-    def get_all(self):
+    def get_categories(self):
         url = self.url + "/get-categories/"
         return self.session.get(url).json()
 
@@ -118,7 +144,7 @@ class APIGarden():
         self.url = "https://leekwars.com/api/garden"
 
     def get(self, token):
-        url = self.url + "/get-all/" + token
+        url = self.url + "/get/" + token
         return self.session.get(url).json()
 
     def get_composition_opponents(self, composition, token):
