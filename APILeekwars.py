@@ -187,6 +187,21 @@ class APIGarden():
         url = self.url + "/start-team-fight/"
         return self.session.post(url, data = {"composition_id" : composition_id, "target_id" : target_id, "token" : token}).json()
 
+class APILeek():
+    """docstring for APILeek"""
+    def __init__(self, session):
+        self.session = session
+        self.url = "https://leekwars.com/api/leek"
+
+    def get_registers(self, leek_id, token):
+        url = self.url + "/get-registers/" + str(leek_id) + "/" + token
+        return self.session.get(url).json()
+
+    def set_register(self, leek_id, key, value, token):
+        url = self.url + "/set-register/"
+        return self.session.post(url, data = {"leek_id" : leek_id, "key" : key, "value" : value, "token" : token}).json()
+
+
 class APILeekwars():
     """docstring for APILeekwars"""
     def __init__(self):
@@ -195,3 +210,4 @@ class APILeekwars():
         self.fight = APIFight(self.session)
         self.function = APIFunction(self.session)
         self.garden = APIGarden(self.session)
+        self.leek = APILeek(self.session)
