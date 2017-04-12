@@ -201,6 +201,20 @@ class APILeek():
         url = self.url + "/set-register/"
         return self.session.post(url, data = {"leek_id" : leek_id, "key" : key, "value" : value, "token" : token}).json()
 
+class APINotification():
+    """docstring for APILeek"""
+    def __init__(self, session):
+        self.session = session
+        self.url = "https://leekwars.com/api/notification"
+
+    def get_latest(self, count, token):
+        url = self.url + "/get-latest/" + str(count) + "/" + token
+        return self.session.get(url).json()
+
+    def read_all(self, token):
+        url = self.url + "/read-all/"
+        return self.session.post(url, data = {"token" : token}).json()
+
 
 class APILeekwars():
     """docstring for APILeekwars"""
@@ -211,3 +225,4 @@ class APILeekwars():
         self.function = APIFunction(self.session)
         self.garden = APIGarden(self.session)
         self.leek = APILeek(self.session)
+        self.notification = APINotification(self.session)
