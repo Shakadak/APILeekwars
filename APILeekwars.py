@@ -26,6 +26,23 @@ class APIAI:
         url = self.url + "/new/"
         return self.session.post(url, data = {"folder_id" : folder_id, "v2": v2, "token" : token}).json()
 
+    def rename(self, ai_id, new_name, token):
+        url = self.url + "/rename/"
+        return self.session.post(url, data = {"ai_id" : ai_id, "new_name": new_name, "token" : token}).json()
+
+    def save(self, ai_id, code, token):
+        url = self.url + "/save/"
+        return self.session.post(url, data = {"ai_id" : ai_id, "code": code, "token" : token}).json()
+
+    def test(self, ai_id, leek_id, bots, type, token):
+        url = self.url + "/test/"
+        return self.session.post(url, data = {"ai_id" : ai_id, "leek_id": leek_id, "bots": bots, "type": type, "token" : token}).json()
+
+    def test_new(self, data, token):
+        """example@https://gist.github.com/5pilow/72294ce31f856c730e1ffb17528d7c31"""
+        url = self.url + "/test-new/"
+        return self.session.post(url, data = {"data" : data, "token" : token}).json()
+
 class APIFarmer:
     """docstring for wat"""
     def __init__(self, session):
@@ -220,6 +237,7 @@ class APILeekwars():
     """docstring for APILeekwars"""
     def __init__(self):
         self.session = requests.Session()
+        self.ai = APIAI(self.session)
         self.farmer = APIFarmer(self.session)
         self.fight = APIFight(self.session)
         self.function = APIFunction(self.session)
