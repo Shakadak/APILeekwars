@@ -154,7 +154,7 @@ class APIFunction():
         url = self.url + "/get-categories/"
         return self.session.get(url).json()
 
-class APIGarden():
+class APIGarden:
     """docstring for APIGarden"""
     def __init__(self, session):
         self.session = session
@@ -204,7 +204,7 @@ class APIGarden():
         url = self.url + "/start-team-fight/"
         return self.session.post(url, data = {"composition_id" : composition_id, "target_id" : target_id, "token" : token}).json()
 
-class APILeek():
+class APILeek:
     """docstring for APILeek"""
     def __init__(self, session):
         self.session = session
@@ -218,7 +218,7 @@ class APILeek():
         url = self.url + "/set-register/"
         return self.session.post(url, data = {"leek_id" : leek_id, "key" : key, "value" : value, "token" : token}).json()
 
-class APINotification():
+class APINotification:
     """docstring for APILeek"""
     def __init__(self, session):
         self.session = session
@@ -232,6 +232,16 @@ class APINotification():
         url = self.url + "/read-all/"
         return self.session.post(url, data = {"token" : token}).json()
 
+class APIService:
+    """docstring for APIService"""
+    def __init__(self, session):
+        self.session = session
+        self.url = "https://leekwars.com/api/service"
+
+    def get_all(self, token):
+        url = self.url + "/get-all/" + token
+        return self.session.get(url).json()
+
 
 class APILeekwars():
     """docstring for APILeekwars"""
@@ -244,3 +254,4 @@ class APILeekwars():
         self.garden = APIGarden(self.session)
         self.leek = APILeek(self.session)
         self.notification = APINotification(self.session)
+        self.service = APIService(self.session)
