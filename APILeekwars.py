@@ -66,7 +66,7 @@ class APIFarmer:
         return self.session.post(url, data = {"token" : token}).json()
 
     def get(self, farmer_id):
-        url = self.url + "/get/" + farmer_id
+        url = self.url + "/get/" + str(farmer_id)
         return self.session.get(url).json()
 
     def get_connected(self):
