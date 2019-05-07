@@ -1,3 +1,5 @@
+Incomplete at the moment, you can check @CaptainTheDelta generated implementation here https://gist.github.com/CaptainTheDelta/543f649a97e6009ffa662f15f9f7d7a4
+
 # APILeekwars
 some stuff to use the Leekwars API in python, very basic
 
