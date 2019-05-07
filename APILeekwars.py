@@ -79,8 +79,13 @@ class APIFarmer:
 
     def login_token(self, login, password):
         url = self.url + "/login-token/"
-        return self.session.post(url, data = {"login" : login,
-                                            "password" : password}).json()
+        data = {
+                "login" : login,
+                "password" : password
+                }
+        response = self.session.post(url, data = data).json()
+        self.session.headers.update({"authorization": "Bearer {}".format(response["token"])})
+        return response
 
     def register(self, login, password, email, leek_name, godfather):
         url = self.url + "/register/"
@@ -177,8 +182,8 @@ class APIGarden:
         return self.session.get(url).json()
 
     def get_leek_opponents(self, leek_id, token):
-        url = self.url + "/get-leek-opponents/" + str(leek_id) + "/" + token
-        return self.session.get(url).json()
+        url = self.url + "/get-leek-opponents/" + str(leek_id)
+        return self.session.get(url, data = {"leek_id": leek_id}).json()
 
     def get_solo_challenge(self, leek_id, token):
         url = self.url + "/get-solo-challenge/" + str(leek_id) + "/" + token

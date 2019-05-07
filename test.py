@@ -470,10 +470,10 @@ def notifications():
 
 def solo_aggro(api, token, leek):
     r = api.garden.get_leek_opponents(leek, token)
-    if r["success"]:
-        random.seed()
-        opponent = random.choice(r["opponents"])["id"]
-        return api.garden.start_solo_fight(leek, opponent, token)
+    print("solo_aggro r: {}".format(r))
+    random.seed()
+    opponent = random.choice(r["opponents"])["id"]
+    return api.garden.start_solo_fight(leek, opponent, token)
     return r
 
 def farmer_aggro(api, token):
@@ -500,8 +500,8 @@ def generate_data(iteration):
 
     #farmer_name = "UndersizedPalmTree"
     #farmer_name = "PumpKing"
-    #farmer_name = "PumpkinAreBetter"
-    farmer_name = "PumpOnlineEvolution"
+    farmer_name = "PumpkinAreBetter"
+    #farmer_name = "PumpOnlineEvolution"
 
     fights = get_fights()
 
@@ -516,6 +516,7 @@ def generate_data(iteration):
     for i in range(nb_fight):
         print("fight attempt: {}".format(i + 1))
         token = api.farmer.login_token(farmer_name, base_data["farmers"][farmer_name])["token"]
+        print("token: {}".format(token))
 
         #r = api.garden.start_farmer_challenge(46679, token) # vs PumpkinAreBetter
         #r = api.garden.start_farmer_challenge(46725, token) # vs UndersizedPalmTree
@@ -553,7 +554,10 @@ def generate_data(iteration):
         #r = solo_aggro(api, token, 52360) # ElegantPineapple
         #r = solo_aggro(api, token, 52753) # LeafyMango
 
-        #r = solo_aggro(api, token, 50906) # LeekySquash
+        print(api.session)
+        r = solo_aggro(api, token, 50906) # LeekySquash
+        print(api.session)
+        print("solo_aggro r: {}".format(r))
         #r = solo_aggro(api, token, 51071) # LovelySquash
         #r = solo_aggro(api, token, 51328) # StemySquash
         #r = solo_aggro(api, token, 52121) # WintySquash
@@ -567,7 +571,7 @@ def generate_data(iteration):
         #r = solo_aggro(api, token, 66637) # NotSelected
         #r = solo_aggro(api, token, 67007) # AlmostMonteCarlo
 
-        r = farmer_aggro(api, token)
+        #r = farmer_aggro(api, token)
 
         # r = api.ai.test_new('''{
         #     "type":"solo",
@@ -626,20 +630,22 @@ def generate_data(iteration):
         # test_data = '''{"type":"solo","ais":{"50906":{"id":218446,"name":"Test/BrainDead"},"51071":{"id":220055,"name":"Test/BrainDead"},"51328":{"id":220055,"name":"Test/BrainDead"},"52121":{"id":218446,"name":"TooBright"}},"team1":{"50906":{"id":50906,"name":"WintySquash","color":"#FC0FC0","capital":0,"level":300,"talent":1471,"skin":2,"hat":1,"real":true}},"team2":{"51328":{"id":51328,"name":"StemySquash","color":"#EB9206","capital":0,"level":300,"talent":2022,"skin":5,"hat":9,"real":true}}}'''
         # test_data = '''"{"type":"solo","team1":{"52121":{"id":52121,"name":"WintySquash","color":"#0077DC","capital":0,"level":300,"talent":1471,"skin":2,"hat":1,"real":true},"-1":{"id":-1,"name":"Domingo","bot":true,"level":150,"skin":1,"hat":null,"tp":"10 to 20","mp":"3 to 8","frequency":100,"life":"100 to 3000","strength":"50 to 1500","wisdom":0,"agility":0,"resistance":0,"science":0,"magic":0,"chips":[],"weapons":[]}},"team2":{"51328":{"id":51328,"name":"StemySquash","color":"#EB9206","capital":0,"level":300,"talent":1148,"skin":5,"hat":9,"real":true},"-4":{"id":-4,"name":"Guj","bot":true,"level":150,"skin":4,"hat":null,"tp":"10 to 20","mp":"3 to 8","frequency":100,"life":"100 to 3000","strength":0,"wisdom":0,"agility":0,"resistance":"50 to 1500","science":0,"magic":0,"chips":[],"weapons":[]}}}'''
         # r = api.ai.test_new(test_data, token)
-        if r["success"]:
-            fight = r["fight"]
+        fight = r["fight"]
+        print(fight)
+        #if r["success"]:
+            #fight = r["fight"]
             # fights.append(fight)
             # put_fights(fights)
-            print(fight)
-            batch = get_batch(api, token, fight)
+            #print(fight)
+            #batch = get_batch(api, token, fight)
             # data.extend(batch)
             # put_data(data)
             #if batch != []:
             #    nn.SGD(batch, 64, 5, 0.00016, monitor_training_accuracy = True, lmbda = 0.01)
             #    nn.save("nn.json")
-        else:
-            print(r)
-            exit()
+        #else:
+        #    print(r)
+        #    exit()
 
         r = api.farmer.disconnect(token)
         #nn.save("nn.json")
@@ -846,8 +852,8 @@ def stuff():
     api = API.APILeekwars()
 
     #farmer_name = "UndersizedPalmTree"
-    farmer_name = "PumpKing"
-    #farmer_name = "PumpkinAreBetter"
+    #farmer_name = "PumpKing"
+    farmer_name = "PumpkinAreBetter"
 
     token = api.farmer.login_token(farmer_name, base_data["farmers"][farmer_name])["token"]
     services = api.service.get_all(token)
