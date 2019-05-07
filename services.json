@@ -1,0 +1,2289 @@
+{
+    "services": [
+        {
+            "function": "change-folder",
+            "id": 205,
+            "method": "post",
+            "module": "ai",
+            "parameters": [
+                "ai_id",
+                "folder_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "delete",
+            "id": 66,
+            "method": "post",
+            "module": "ai",
+            "parameters": [
+                "ai_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get",
+            "id": 64,
+            "method": "get",
+            "module": "ai",
+            "parameters": [
+                "ai_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "ai"
+            ]
+        },
+        {
+            "function": "get-farmer-ais",
+            "id": 63,
+            "method": "get",
+            "module": "ai",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "new",
+            "id": 132,
+            "method": "post",
+            "module": "ai",
+            "parameters": [
+                "folder_id",
+                "v2",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "boolean",
+                "string"
+            ],
+            "returns": [
+                "ai"
+            ]
+        },
+        {
+            "function": "rename",
+            "id": 143,
+            "method": "post",
+            "module": "ai",
+            "parameters": [
+                "ai_id",
+                "new_name",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "save",
+            "id": 65,
+            "method": "post",
+            "module": "ai",
+            "parameters": [
+                "ai_id",
+                "code",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "test",
+            "id": 67,
+            "method": "post",
+            "module": "ai",
+            "parameters": [
+                "ai_id",
+                "leek_id",
+                "bots",
+                "type",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "array",
+                "string",
+                "string"
+            ],
+            "returns": [
+                "fight"
+            ]
+        },
+        {
+            "function": "test-new",
+            "id": 222,
+            "method": "post",
+            "module": "ai",
+            "parameters": [
+                "data",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": [
+                "fight"
+            ]
+        },
+        {
+            "function": "change-folder",
+            "id": 206,
+            "method": "post",
+            "module": "ai-folder",
+            "parameters": [
+                "folder_id",
+                "dest_folder_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "delete",
+            "id": 207,
+            "method": "post",
+            "module": "ai-folder",
+            "parameters": [
+                "folder_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "new",
+            "id": 204,
+            "method": "post",
+            "module": "ai-folder",
+            "parameters": [
+                "folder_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "id"
+            ]
+        },
+        {
+            "function": "rename",
+            "id": 208,
+            "method": "post",
+            "module": "ai-folder",
+            "parameters": [
+                "folder_id",
+                "new_name",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get",
+            "id": 55,
+            "method": "get",
+            "module": "changelog",
+            "parameters": [
+                "language"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "changelog"
+            ]
+        },
+        {
+            "function": "get-last",
+            "id": 127,
+            "method": "get",
+            "module": "changelog",
+            "parameters": [
+                "language"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "changelog"
+            ]
+        },
+        {
+            "function": "get-all",
+            "id": 44,
+            "method": "get",
+            "module": "chip",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "chips"
+            ]
+        },
+        {
+            "function": "get-templates",
+            "id": 70,
+            "method": "get",
+            "module": "chip",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "templates"
+            ]
+        },
+        {
+            "function": "get-all",
+            "id": 47,
+            "method": "get",
+            "module": "constant",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "constants"
+            ]
+        },
+        {
+            "function": "get-all",
+            "id": 141,
+            "method": "get",
+            "module": "country",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "countries"
+            ]
+        },
+        {
+            "function": "activate",
+            "id": 130,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "farmer_id",
+                "code"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "change-country",
+            "id": 142,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "country_code",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "change-password",
+            "id": 145,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "password",
+                "new_password",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "disconnect",
+            "id": 138,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get",
+            "id": 11,
+            "method": "get",
+            "module": "farmer",
+            "parameters": [
+                "farmer_id"
+            ],
+            "parameters_types": [
+                "number"
+            ],
+            "returns": [
+                "farmer"
+            ]
+        },
+        {
+            "function": "get-connected",
+            "id": 42,
+            "method": "get",
+            "module": "farmer",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "farmers",
+                "count"
+            ]
+        },
+        {
+            "function": "get-from-token",
+            "id": 12,
+            "method": "get",
+            "module": "farmer",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "farmer"
+            ]
+        },
+        {
+            "function": "login-token",
+            "id": 10,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "login",
+                "password"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": [
+                "token"
+            ]
+        },
+        {
+            "function": "register",
+            "id": 129,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "login",
+                "password",
+                "email",
+                "leek_name",
+                "godfather"
+            ],
+            "parameters_types": [
+                "string",
+                "string",
+                "string",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "register-tournament",
+            "id": 107,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-avatar",
+            "id": 133,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "avatar",
+                "token"
+            ],
+            "parameters_types": [
+                "file",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-github",
+            "id": 210,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "github",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-in-garden",
+            "id": 203,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "in_garden",
+                "token"
+            ],
+            "parameters_types": [
+                "boolean",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-website",
+            "id": 209,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "website",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "unregister",
+            "id": 60,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "password",
+                "delete_forum_messages",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "boolean",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "unregister-tournament",
+            "id": 108,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "update",
+            "id": 61,
+            "method": "post",
+            "module": "farmer",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "comment",
+            "id": 136,
+            "method": "post",
+            "module": "fight",
+            "parameters": [
+                "fight_id",
+                "comment",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get",
+            "id": 21,
+            "method": "get",
+            "module": "fight",
+            "parameters": [
+                "fight_id"
+            ],
+            "parameters_types": [
+                "number"
+            ],
+            "returns": [
+                "fight"
+            ]
+        },
+        {
+            "function": "get-logs",
+            "id": 22,
+            "method": "get",
+            "module": "fight",
+            "parameters": [
+                "fight_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "logs"
+            ]
+        },
+        {
+            "function": "get-all",
+            "id": 48,
+            "method": "get",
+            "module": "function",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "functions"
+            ]
+        },
+        {
+            "function": "get-categories",
+            "id": 56,
+            "method": "get",
+            "module": "function",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "categories"
+            ]
+        },
+        {
+            "function": "get",
+            "id": 16,
+            "method": "get",
+            "module": "garden",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "garden"
+            ]
+        },
+        {
+            "function": "get-composition-opponents",
+            "id": 199,
+            "method": "get",
+            "module": "garden",
+            "parameters": [
+                "composition",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "opponents"
+            ]
+        },
+        {
+            "function": "get-farmer-challenge",
+            "id": 196,
+            "method": "get",
+            "module": "garden",
+            "parameters": [
+                "target",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "farmer"
+            ]
+        },
+        {
+            "function": "get-farmer-opponents",
+            "id": 197,
+            "method": "get",
+            "module": "garden",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "opponents"
+            ]
+        },
+        {
+            "function": "get-leek-opponents",
+            "id": 198,
+            "method": "get",
+            "module": "garden",
+            "parameters": [
+                "leek_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "opponents"
+            ]
+        },
+        {
+            "function": "get-solo-challenge",
+            "id": 148,
+            "method": "get",
+            "module": "garden",
+            "parameters": [
+                "leek_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "leek",
+                "challenges"
+            ]
+        },
+        {
+            "function": "start-farmer-challenge",
+            "id": 123,
+            "method": "post",
+            "module": "garden",
+            "parameters": [
+                "target_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "fight"
+            ]
+        },
+        {
+            "function": "start-farmer-fight",
+            "id": 18,
+            "method": "post",
+            "module": "garden",
+            "parameters": [
+                "target_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "fight_id"
+            ]
+        },
+        {
+            "function": "start-solo-challenge",
+            "id": 20,
+            "method": "post",
+            "module": "garden",
+            "parameters": [
+                "leek_id",
+                "target_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": [
+                "fight_id"
+            ]
+        },
+        {
+            "function": "start-solo-fight",
+            "id": 17,
+            "method": "post",
+            "module": "garden",
+            "parameters": [
+                "leek_id",
+                "target_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": [
+                "fight_id"
+            ]
+        },
+        {
+            "function": "start-team-fight",
+            "id": 19,
+            "method": "post",
+            "module": "garden",
+            "parameters": [
+                "composition_id",
+                "target_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": [
+                "fight_id"
+            ]
+        },
+        {
+            "function": "get-all",
+            "id": 46,
+            "method": "get",
+            "module": "hat",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "hats"
+            ]
+        },
+        {
+            "function": "get-templates",
+            "id": 52,
+            "method": "get",
+            "module": "hat",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "templates"
+            ]
+        },
+        {
+            "function": "get",
+            "id": 14,
+            "method": "get",
+            "module": "lang",
+            "parameters": [
+                "file",
+                "lang"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": [
+                "lang"
+            ]
+        },
+        {
+            "function": "add-chip",
+            "id": 30,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "chip_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "add-weapon",
+            "id": 28,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "weapon_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "create",
+            "id": 4,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "name",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "delete-register",
+            "id": 59,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "key",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get",
+            "id": 1,
+            "method": "get",
+            "module": "leek",
+            "parameters": [
+                "leek_id"
+            ],
+            "parameters_types": [
+                "number"
+            ],
+            "returns": [
+                "leek"
+            ]
+        },
+        {
+            "function": "get-count",
+            "id": 34,
+            "method": "get",
+            "module": "leek",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "leek_count"
+            ]
+        },
+        {
+            "function": "get-image",
+            "id": 38,
+            "method": "get",
+            "module": "leek",
+            "parameters": [
+                "leek",
+                "scale"
+            ],
+            "parameters_types": [
+                "number",
+                "number"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get-level-popup",
+            "id": 163,
+            "method": "get",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "popup"
+            ]
+        },
+        {
+            "function": "get-next-price",
+            "id": 128,
+            "method": "get",
+            "module": "leek",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "price"
+            ]
+        },
+        {
+            "function": "get-private",
+            "id": 2,
+            "method": "get",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "leek"
+            ]
+        },
+        {
+            "function": "get-registers",
+            "id": 57,
+            "method": "get",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "registers"
+            ]
+        },
+        {
+            "function": "register-tournament",
+            "id": 6,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "remove-ai",
+            "id": 33,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "remove-chip",
+            "id": 31,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "chip_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "remove-hat",
+            "id": 54,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "remove-weapon",
+            "id": 29,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "weapon_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "rename-crystals",
+            "id": 131,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "new_name",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "rename-habs",
+            "id": 3,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "new_name",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-ai",
+            "id": 32,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "ai_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-hat",
+            "id": 27,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "hat_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-in-garden",
+            "id": 5,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "in_garden",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "boolean",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-popup-level-seen",
+            "id": 164,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-register",
+            "id": 58,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "key",
+                "value",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "spend-capital",
+            "id": 8,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek",
+                "characteristics",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "json",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "unregister-tournament",
+            "id": 7,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "use-potion",
+            "id": 53,
+            "method": "post",
+            "module": "leek",
+            "parameters": [
+                "leek_id",
+                "potion_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "version",
+            "id": 226,
+            "method": "get",
+            "module": "leek-wars",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "version"
+            ]
+        },
+        {
+            "function": "buy-crystals",
+            "id": 119,
+            "method": "post",
+            "module": "market",
+            "parameters": [
+                "item_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "buy-habs",
+            "id": 118,
+            "method": "post",
+            "module": "market",
+            "parameters": [
+                "item_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get-item-templates",
+            "id": 117,
+            "method": "get",
+            "module": "market",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "templates"
+            ]
+        },
+        {
+            "function": "sell-habs",
+            "id": 120,
+            "method": "post",
+            "module": "market",
+            "parameters": [
+                "item_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "create-conversation",
+            "id": 167,
+            "method": "post",
+            "module": "message",
+            "parameters": [
+                "farmer_id",
+                "message",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": [
+                "conversation_id"
+            ]
+        },
+        {
+            "function": "get-latest-conversations",
+            "id": 40,
+            "method": "get",
+            "module": "message",
+            "parameters": [
+                "count",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get-messages",
+            "id": 125,
+            "method": "get",
+            "module": "message",
+            "parameters": [
+                "conversation_id",
+                "count",
+                "page",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": [
+                "messages"
+            ]
+        },
+        {
+            "function": "quit-conversation",
+            "id": 150,
+            "method": "post",
+            "module": "message",
+            "parameters": [
+                "conversation_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "send-message",
+            "id": 126,
+            "method": "post",
+            "module": "message",
+            "parameters": [
+                "conversation_id",
+                "message",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get-latest",
+            "id": 39,
+            "method": "get",
+            "module": "notification",
+            "parameters": [
+                "count",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "read-all",
+            "id": 149,
+            "method": "post",
+            "module": "notification",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get-all",
+            "id": 49,
+            "method": "get",
+            "module": "potion",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "potions"
+            ]
+        },
+        {
+            "function": "fun",
+            "id": 68,
+            "method": "get",
+            "module": "ranking",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "rankings"
+            ]
+        },
+        {
+            "function": "get",
+            "id": 25,
+            "method": "get",
+            "module": "ranking",
+            "parameters": [
+                "category",
+                "order",
+                "page"
+            ],
+            "parameters_types": [
+                "string",
+                "string",
+                "number"
+            ],
+            "returns": [
+                "ranking",
+                "page_count"
+            ]
+        },
+        {
+            "function": "get-farmer-rank",
+            "id": 152,
+            "method": "get",
+            "module": "ranking",
+            "parameters": [
+                "farmer_id",
+                "order"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "rank"
+            ]
+        },
+        {
+            "function": "get-home-ranking",
+            "id": 124,
+            "method": "get",
+            "module": "ranking",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "leeks",
+                "farmers"
+            ]
+        },
+        {
+            "function": "get-leek-rank",
+            "id": 151,
+            "method": "get",
+            "module": "ranking",
+            "parameters": [
+                "leek_id",
+                "order"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "rank"
+            ]
+        },
+        {
+            "function": "get-team-rank",
+            "id": 153,
+            "method": "get",
+            "module": "ranking",
+            "parameters": [
+                "team_id",
+                "order"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "rank"
+            ]
+        },
+        {
+            "function": "search",
+            "id": 69,
+            "method": "post",
+            "module": "ranking",
+            "parameters": [
+                "query",
+                "search_leeks",
+                "search_farmers",
+                "search_teams"
+            ],
+            "parameters_types": [
+                "string",
+                "boolean",
+                "boolean",
+                "boolean"
+            ],
+            "returns": [
+                "results"
+            ]
+        },
+        {
+            "function": "get-all",
+            "id": 26,
+            "method": "get",
+            "module": "service",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": [
+                "services"
+            ]
+        },
+        {
+            "function": "get-templates",
+            "id": 156,
+            "method": "get",
+            "module": "summon",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "summon_templates"
+            ]
+        },
+        {
+            "function": "accept-candidacy",
+            "id": 96,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "candidacy_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "ban",
+            "id": 140,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "farmer_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "cancel-candidacy",
+            "id": 101,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "cancel-candidacy-for-team",
+            "id": 102,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "team_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "change-description",
+            "id": 99,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "description",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "change-member-grade",
+            "id": 104,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "member_id",
+                "new_grade",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "change-owner",
+            "id": 103,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "new_owner",
+                "password",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "create",
+            "id": 106,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "team_name",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "create-composition",
+            "id": 113,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "composition_name",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "delete-composition",
+            "id": 114,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "composition_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "dissolve",
+            "id": 146,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get",
+            "id": 41,
+            "method": "get",
+            "module": "team",
+            "parameters": [
+                "team_id"
+            ],
+            "parameters_types": [
+                "number"
+            ],
+            "returns": [
+                "team"
+            ]
+        },
+        {
+            "function": "get-connected",
+            "id": 139,
+            "method": "get",
+            "module": "team",
+            "parameters": [
+                "team_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "team"
+            ]
+        },
+        {
+            "function": "get-private",
+            "id": 105,
+            "method": "get",
+            "module": "team",
+            "parameters": [
+                "team_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "move-leek",
+            "id": 112,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "leek_id",
+                "to",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "quit",
+            "id": 135,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "register-tournament",
+            "id": 115,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "composition_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "reject-candidacy",
+            "id": 97,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "candidacy_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "send-candidacy",
+            "id": 100,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "team_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-emblem",
+            "id": 134,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "team_id",
+                "emblem",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "file",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "set-opened",
+            "id": 144,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "opened",
+                "token"
+            ],
+            "parameters_types": [
+                "boolean",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "unregister-tournament",
+            "id": 116,
+            "method": "post",
+            "module": "team",
+            "parameters": [
+                "composition_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "delete",
+            "id": 216,
+            "method": "post",
+            "module": "test-leek",
+            "parameters": [
+                "id",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get-all",
+            "id": 218,
+            "method": "get",
+            "module": "test-leek",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "leeks"
+            ]
+        },
+        {
+            "function": "new",
+            "id": 215,
+            "method": "post",
+            "module": "test-leek",
+            "parameters": [
+                "name",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": [
+                "id"
+            ]
+        },
+        {
+            "function": "update",
+            "id": 217,
+            "method": "post",
+            "module": "test-leek",
+            "parameters": [
+                "id",
+                "data",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "delete",
+            "id": 212,
+            "method": "post",
+            "module": "test-map",
+            "parameters": [
+                "id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get-all",
+            "id": 214,
+            "method": "get",
+            "module": "test-map",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "maps"
+            ]
+        },
+        {
+            "function": "new",
+            "id": 211,
+            "method": "post",
+            "module": "test-map",
+            "parameters": [
+                "name",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": [
+                "id"
+            ]
+        },
+        {
+            "function": "update",
+            "id": 213,
+            "method": "post",
+            "module": "test-map",
+            "parameters": [
+                "id",
+                "data",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "delete",
+            "id": 223,
+            "method": "post",
+            "module": "test-scenario",
+            "parameters": [
+                "id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get-all",
+            "id": 220,
+            "method": "get",
+            "module": "test-scenario",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "scenarios"
+            ]
+        },
+        {
+            "function": "new",
+            "id": 219,
+            "method": "post",
+            "module": "test-scenario",
+            "parameters": [
+                "name",
+                "token"
+            ],
+            "parameters_types": [
+                "string",
+                "string"
+            ],
+            "returns": [
+                "id"
+            ]
+        },
+        {
+            "function": "update",
+            "id": 221,
+            "method": "post",
+            "module": "test-scenario",
+            "parameters": [
+                "id",
+                "data",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "check",
+            "id": 13,
+            "method": "post, get",
+            "module": "token",
+            "parameters": [
+                "token"
+            ],
+            "parameters_types": [
+                "string"
+            ],
+            "returns": [
+                "token",
+                "validity",
+                "farmer_id"
+            ]
+        },
+        {
+            "function": "comment",
+            "id": 137,
+            "method": "post",
+            "module": "tournament",
+            "parameters": [
+                "tournament_id",
+                "comment",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get",
+            "id": 111,
+            "method": "get",
+            "module": "tournament",
+            "parameters": [
+                "tournament_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": [
+                "tournament"
+            ]
+        },
+        {
+            "function": "get-admin",
+            "id": 109,
+            "method": "get",
+            "module": "trophy",
+            "parameters": [
+                "lang",
+                "token",
+                "supertoken"
+            ],
+            "parameters_types": [
+                "string",
+                "string",
+                "string"
+            ],
+            "returns": [
+                "trophies"
+            ]
+        },
+        {
+            "function": "get-all",
+            "id": 169,
+            "method": "get",
+            "module": "trophy",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "trophies"
+            ]
+        },
+        {
+            "function": "get-categories",
+            "id": 193,
+            "method": "get",
+            "module": "trophy",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "categories"
+            ]
+        },
+        {
+            "function": "get-farmer-trophies",
+            "id": 110,
+            "method": "get",
+            "module": "trophy",
+            "parameters": [
+                "farmer_id",
+                "lang",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string",
+                "string"
+            ],
+            "returns": [
+                "trophies"
+            ]
+        },
+        {
+            "function": "unlock",
+            "id": 168,
+            "method": "post",
+            "module": "trophy",
+            "parameters": [
+                "trophy_id",
+                "token"
+            ],
+            "parameters_types": [
+                "number",
+                "string"
+            ],
+            "returns": []
+        },
+        {
+            "function": "get-all",
+            "id": 45,
+            "method": "get",
+            "module": "weapon",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "weapons"
+            ]
+        },
+        {
+            "function": "get-templates",
+            "id": 71,
+            "method": "get",
+            "module": "weapon",
+            "parameters": [],
+            "parameters_types": [],
+            "returns": [
+                "templates"
+            ]
+        }
+    ],
+    "success": true
+}
